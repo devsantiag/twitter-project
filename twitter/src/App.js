@@ -1,5 +1,7 @@
 /* unique machine to run contents of page */
 
+// Principal repository https://github.com/devsantiag/twitter-project
+
 import React from 'react'
 import Main from './components/Main'
 import './design/main_general_styles.css'
