@@ -1,0 +1,32 @@
+/* general-style: main */
+
+/* style of container div principal */
+.styleDivContainer {
+    position: absolute;
+    padding: 0;
+    margin: 0 auto;
+
+    top: 15%;
+    right: auto;
+    left: 40%;
+
+    transform: translate(-50%, -50%);
+}
+
+/* input-txt principal when the cliente put contents for post */
+.inputContentPrincipal {
+    position: relative;
+    width: 200%;
+    height: 65px;
+    border-radius: 7px;
+}
+
+/* styleButton post and clear */
+
+/* form-post style */
+.ContentBoxMain {
+    background-color: rgba(247, 247, 247, 0.863);
+    position: absolute;
+    width: 201%;
+
+}
