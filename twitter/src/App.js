@@ -4,7 +4,7 @@
 
 import React from 'react'
 import Main from './components/Main'
-import './design/main_general_styles.css'
+import './design/main_style.css'
 
 function App() {
   return (

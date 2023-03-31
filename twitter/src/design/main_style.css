@@ -1,32 +1,49 @@
 /* general-style: main */
 
+/* the principal styles application */
+* {
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: none;
+}
+
+/* style-logo bird */
+.logo-size-style {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    padding: 20px;
+    cursor: pointer;
+}
+
 /* style of container div principal */
 .styleDivContainer {
     position: absolute;
     padding: 0;
     margin: 0 auto;
 
-    top: 15%;
-    right: auto;
-    left: 40%;
-
-    transform: translate(-50%, -50%);
+    top: 0%;
+    right: 37.6%;
+    transform: translate(-50%, 6%);
 }
 
 /* input-txt principal when the cliente put contents for post */
 .inputContentPrincipal {
     position: relative;
     width: 200%;
-    height: 65px;
+    height: 95px;
     border-radius: 7px;
 }
 
-/* styleButton post and clear */
+/* style-button post and clear */
+/* contnet */
 
-/* form-post style */
+/* format style of content posted per client */
 .ContentBoxMain {
-    background-color: rgba(247, 247, 247, 0.863);
+    background-color: red;
     position: absolute;
-    width: 201%;
-
+    width: 201.5%;
+}
+.inputContentPrincipal {
+    font-size: 12pt;
 }
