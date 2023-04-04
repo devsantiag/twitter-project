@@ -5,13 +5,17 @@
     margin: 0 auto;
     padding: 0;
     list-style-type: none;
+    resize: none;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    text-align: justify;
 }
 
 /* style-logo bird */
 .logo-size-style {
-    position: relative;
-    width: 50px;
-    height: 50px;
+    position: absolute;
+    width: 100px;
+    height: 100px;
     padding: 20px;
     cursor: pointer;
 }
@@ -24,26 +28,88 @@
 
     top: 0%;
     right: 37.6%;
-    transform: translate(-50%, 6%);
+    transform: translate(-65%, 6%);
 }
 
 /* input-txt principal when the cliente put contents for post */
 .inputContentPrincipal {
     position: relative;
     width: 200%;
-    height: 95px;
-    border-radius: 7px;
+    height: 100px;
+    font-style: normal;
+    text-align: justify;
+    border-radius: 9.2px;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14.5pt;
+}
+/* style of Character Counter */
+.CharacterCounter {
+    font-size: 11pt;
+    position: relative;
+    top: -74.5px;
+    left: 187.5%;
+    transform: translate(2.5%, 0%);
 }
 
-/* style-button post and clear */
-/* contnet */
+/* style-button clear all */
+.buttonClearAll {
+    position: relative;
+    cursor: pointer;
+    padding: 10px;
+    width: 50%;
+    height: 50px;
+    text-align: center;
+}
+
+/*
+===============================BREAK====================================
+*/
 
 /* format style of content posted per client */
 .ContentBoxMain {
-    background-color: red;
     position: absolute;
-    width: 201.5%;
+    width: 200.9%;  
+    height: 110px;
+    font-size: 14pt;
+    box-sizing: border-box; 
 }
-.inputContentPrincipal {
+/* style-li: content post */
+.liContentStyle {
+    position: relative;
+    word-wrap: break-word;
+    text-align: justify;
+}
+
+/* image profile of user */
+.imageUser {
+    position: relative;
+    border-radius: 50%;
+    display: flex;
+    width: 8.5%;
+    left: -45.6%;
+    top: 0px;
+}
+/* name user, nickname of user and checked */
+.nameUser {
+    display: block;
+    position: relative;
     font-size: 12pt;
+    text-indent: 9.3%;
+    top: -50px;
+}
+/* content posted */
+.textContentPosted {
+    display: block;
+    text-align: justify;
+    position: absolute;
+    word-break: break-all;
+    display: flex;
+    top: 25px;
+    left: 9.4%;
+}
+/* color warning limite text  */
+.colorWarningLimiteText {
+    color: red;
+    position: relative;
 }

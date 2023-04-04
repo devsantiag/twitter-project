@@ -9,20 +9,6 @@ export default function Main() {
   const [storageContent, setStorageContent] = useState([])
   const [warning, setWarning] = useState('')
 
-  function handleSubmitForm(event) {
-    event.preventDefault()
-    setTimeout(() => {
-      if (inputContent.length > 224) {
-        setWarning(<p>The number of characters is greater than 150. Please try again!</p>)
-      } else if (inputContent.length === 0 || inputContent.length < 5) {
-        setWarning(<p>No value was entered in the field! Please try again.</p>)
-        setStorageContent([
-          ...storageContent, inputContent,
-        ])
-      }
-    }, 250);
-  }
-
   function handleClearFormClick() {
     setStorageContent([])
     setWarning('')
@@ -36,23 +22,31 @@ export default function Main() {
 
   const remainingChars = 250 - inputContent.length
 
+  const profileInfo = {
+    nameUser: 'Santiago | DEV',
+    nickName: '@devsantiag',
+    userImage: 'https://pbs.twimg.com/profile_images/1643025757340303361/xs_lhcGB_400x400.jpg',
+    checked : ''
+  }
+
+
   function hundleSendContent(event) {
-    if (inputContent.length < 250 && inputContent.length > 5) {
+    if (inputContent.length < 251 && inputContent.length > 10) {
       if (event.key === 'Enter') {
         event.preventDefault()
         setStorageContent([
           ...storageContent, inputContent,
         ])
         setInputContent('')
-      } else if (inputContent.length > 250 && inputContent.length < 5) {
-        setWarning(<p>The amount of characters is greater than 250 or less than 5. Please try again!</p>)
       }
+      setWarning('')
+    } else if (!inputContent.length < 251) {
+      setWarning(<p className="colorWarningLimiteText">The number of characters is greater than 250. Please try again!</p>)
     }
   }
-
   return (
     <div className="styleDivContainer">
-      <form onSubmit={handleSubmitForm}>
+      <form onSubmit={hundleSendContent}>
         <textarea className="inputContentPrincipal"
           type="text"
           name="inputText"
@@ -62,22 +56,28 @@ export default function Main() {
           placeholder="What's happening?"
           onKeyDown={hundleSendContent}
         />
-        <button type="button" onClick={handleClearFormClick}>Clear all</button>
-        <p>{remainingChars}</p>
+        <button className="buttonClearAll" type="button" onClick={handleClearFormClick}>Clear all</button>
+        <div className="CharacterCounter">
+          <p>{remainingChars}</p>
+        </div>
       </form>
 
       <main className="ContentBoxMain" >
-
         {storageContent.map((postStorage, indexId) => (
           <ul key={indexId}>
-            <li>
+            <li className="liContentStyle">
+              <img src={profileInfo.userImage} className="imageUser" alt="userImage" />
+              <p className="nameUser"> {profileInfo.nameUser} {profileInfo.nickName} </p>
+              <p className="textContentPosted" >
               {postStorage}
-              <button type="button" onClick={() => hundleClearItem(indexId)} >Clear</button>
+
+              </p>
             </li>
+            <button type="button" onClick={() => hundleClearItem(indexId)} >Clear</button>
           </ul>
         ))}
         <div>
-          {warning}
+            {warning}
         </div>
       </main>
     </div>
