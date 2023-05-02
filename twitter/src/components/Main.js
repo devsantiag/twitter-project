@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import '../design/main_style.css'
 
 export default function Main() {
-
   const [inputContent, setInputContent] = useState('')
   const [storageContent, setStorageContent] = useState([])
   const [warning, setWarning] = useState('')
@@ -14,7 +13,7 @@ export default function Main() {
     setWarning('')
   }
 
-  function hundleClearItem(index) {
+  function hundleClearItemIndividual(index) {
     const newStorageContent = [...storageContent]
     newStorageContent.splice(index, 1)
     setStorageContent(newStorageContent)
@@ -25,8 +24,8 @@ export default function Main() {
   const profileInfo = {
     nameUser: 'Santiago | DEV',
     nickName: '@devsantiag',
-    userImage: 'https://pbs.twimg.com/profile_images/1643025757340303361/xs_lhcGB_400x400.jpg',
-    checked : ''
+    userImage: 'https://pbs.twimg.com/profile_images/1644894643660759040/J4whV6qJ_400x400.jpg',
+    checked: null
   }
 
 
@@ -35,7 +34,7 @@ export default function Main() {
       if (event.key === 'Enter') {
         event.preventDefault()
         setStorageContent([
-          ...storageContent, inputContent,
+          ...storageContent, inputContent
         ])
         setInputContent('')
       }
@@ -63,21 +62,20 @@ export default function Main() {
       </form>
 
       <main className="ContentBoxMain" >
+        {warning}
         {storageContent.map((postStorage, indexId) => (
           <ul key={indexId}>
             <li className="liContentStyle">
               <img src={profileInfo.userImage} className="imageUser" alt="userImage" />
               <p className="nameUser"> {profileInfo.nameUser} {profileInfo.nickName} </p>
               <p className="textContentPosted" >
-              {postStorage}
-
+              <button type="button" onClick={(e)=>hundleClearItemIndividual(e.target.value)}>Delete content</button>
+                {postStorage}
               </p>
             </li>
-            <button type="button" onClick={() => hundleClearItem(indexId)} >Clear</button>
           </ul>
         ))}
         <div>
-            {warning}
         </div>
       </main>
     </div>

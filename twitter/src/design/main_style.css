@@ -43,6 +43,7 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14.5pt;
 }
+
 /* style of Character Counter */
 .CharacterCounter {
     font-size: 11pt;
@@ -62,6 +63,13 @@
     text-align: center;
 }
 
+/* style-button delete content */
+.buttonClearContent {
+    display: block;
+    position: absolute;
+    top: 35px;
+}
+
 /*
 ===============================BREAK====================================
 */
@@ -69,47 +77,64 @@
 /* format style of content posted per client */
 .ContentBoxMain {
     position: absolute;
-    width: 200.9%;  
+    width: 200.9%;
     height: 110px;
     font-size: 14pt;
-    box-sizing: border-box; 
+    box-sizing: border-box;
+    top: 100%;
+    padding-top: 15px;
 }
+
+/* color warning limite text  */
+.colorWarningLimiteText {
+    color: red;
+    display: block;    
+    transform: translate(0px, -1em);
+    position: absolute;
+}
+
 /* style-li: content post */
 .liContentStyle {
     position: relative;
-    word-wrap: break-word;
-    text-align: justify;
+    margin: 0 0 -25px 0;
 }
 
 /* image profile of user */
 .imageUser {
     position: relative;
-    border-radius: 50%;
+    border-radius: 25%;
     display: flex;
     width: 8.5%;
     left: -45.6%;
     top: 0px;
 }
+
 /* name user, nickname of user and checked */
 .nameUser {
-    display: block;
     position: relative;
+    display: block;
     font-size: 12pt;
     text-indent: 9.3%;
     top: -50px;
+    font-weight: bold;
 }
+
 /* content posted */
 .textContentPosted {
-    display: block;
-    text-align: justify;
-    position: absolute;
+    background-color: red;
     word-break: break-all;
-    display: flex;
-    top: 25px;
+    text-align: justify;
+    position: relative;
+    top: -48.5px;
+    margin: 0 65px 0 0;
     left: 9.4%;
 }
-/* color warning limite text  */
-.colorWarningLimiteText {
-    color: red;
-    position: relative;
+/* verification certificate */
+.verificationCertificate {
+    position: absolute;
+    display: flex;
+    margin: 0 auto;
+    padding: 0;
+    width: 21.9px;
+    height: 21.9px;
 }
