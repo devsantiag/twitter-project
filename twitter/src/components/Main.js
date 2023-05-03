@@ -27,8 +27,6 @@ export default function Main() {
     userImage: 'https://pbs.twimg.com/profile_images/1644894643660759040/J4whV6qJ_400x400.jpg',
     checked: null
   }
-
-
   function hundleSendContent(event) {
     if (inputContent.length < 251 && inputContent.length > 10) {
       if (event.key === 'Enter') {
@@ -69,8 +67,13 @@ export default function Main() {
               <img src={profileInfo.userImage} className="imageUser" alt="userImage" />
               <p className="nameUser"> {profileInfo.nameUser} {profileInfo.nickName} </p>
               <p className="textContentPosted" >
-              <button type="button" onClick={(e)=>hundleClearItemIndividual(e.target.value)}>Delete content</button>
                 {postStorage}
+                <button
+                  className="individualDeleteContent"
+                  type="button"
+                  value={indexId}                  
+                  onClick={(event) => hundleClearItemIndividual(event.target.value)}
+                  >Delete</button>
               </p>
             </li>
           </ul>
