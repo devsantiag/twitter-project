@@ -2,7 +2,7 @@
 
 import React from "react";
 
-function CheckedProfile(props) {
+function CheckedProfile() {
     return(
         <div>
             

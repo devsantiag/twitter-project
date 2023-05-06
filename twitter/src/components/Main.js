@@ -71,13 +71,15 @@ export default function Main() {
               <p className="userNickName">{profileInfo.nickName}</p>
               <p className="textContentPosted" >
                 {postStorage}
-                <CheckedProfile/>
+                <div className="descriptionVerificate" type='description' >
+                <CheckedProfile />
+                </div>
                 <button
                   className="individualDeleteContent"
                   type="button"
-                  value={indexId}                  
+                  value={indexId}
                   onClick={(event) => hundleClearItemIndividual(event.target.value)}
-                  >Delete</button>
+                >Delete</button>
               </p>
             </li>
           </ul>
