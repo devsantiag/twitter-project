@@ -14,12 +14,12 @@
 /* style-logo bird */
 .logo-size-style {
     position: fixed;
-    width: 35px;
-    height: 35px;
     cursor: pointer;
     margin: 0 auto;
     left: 35px;
-    top: 18px;
+    top: 15px;
+    display: inline-block;
+    height: 2.5rem;
 }
 
 /* style of container div principal */
@@ -46,11 +46,14 @@
 
 /* style of Character Counter */
 .CharacterCounter {
-    font-size: 11pt;
     position: relative;
-    top: -74.5px;
-    left: 140.5%;
-    transform: translate(2.5%, 0%);
+    display: inline-block;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 11pt;
+    top: -40px;
+    left: 140%;
+    transform: translate(2.8%, 0%);
     width: 0;
 }
 
@@ -72,39 +75,37 @@
     color: white;
 }
 
-
 /*
 ===============================BREAK====================================
 */
 
-/* format style of content posted per client */
-.ContentBoxMain {
+/* main-format style of content posted per client */
+.mainFormat {
     position: absolute;
+    display: block;
     width: 200.9%;
-    height: 110px;
     font-size: 14pt;
-    box-sizing: border-box;
-    top: 125%;
-    padding-top: 15px;
+    top: 79%;
+    transform: translate(0px, 65.5px);
 }
 
 /* color warning limite text  */
 .colorWarningLimiteText {
-    display: block;
+    display: flex;
     transform: translate(0px, -1em);
     position: absolute;
-    top: -30px;
+    top: -9%;
     color: rgba(255, 0, 0, 0.938);
 }
 
 /* style-li: content post */
 .liContentStyle {
     position: relative;
-    margin: 0 0 -25px 0;
-    top: -30px;
-    margin: 0px 3px 0 0;
+    display: flexbox;
+    margin: 0 auto;
     background-color: rgba(83, 83, 83, 0.034);
-
+    padding: 0 0 5% 0;
+    height: 160px;
 }
 
 /* image profile of user */
@@ -159,13 +160,9 @@
     transform: translate(114px, -50px);
 }
 
-/* description verificate 'title' */
-.descriptionVerificate:hover {
-    
-}
-
 /* content posted */
 .textContentPosted {
+    position: absolute;
     word-break: break-all;
     hyphens: auto;
     display: flex;
@@ -182,8 +179,9 @@
 /* button of delete content indididual post */
 .individualDeleteContent {
     position: absolute;
-    display: flex;
-    left: 80%;
+    display: inline-flex;
+    top: 35px;
+    left: 75%;
     width: 20%;
     height: 40px;
     transform: translate(0px, 50px);
@@ -199,6 +197,7 @@
     align-items: center;
     justify-content: center;
 }
+
 .individualDeleteContent:hover,
 .buttonClearAll:hover {
     background-color: #1ea0d8e8;

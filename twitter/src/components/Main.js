@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import '../design/main_style.css'
 import CheckedProfile from "./CheckedProfile";
+import '../design/Responsiveness.css'
 
 export default function Main() {
   const [inputContent, setInputContent] = useState('')
@@ -37,14 +38,13 @@ export default function Main() {
         setInputContent('')
       }
       setWarning('')
-    } else if (inputContent.length >= 0) { //corrigir 
-      inputContent.substring(0, 140)
+    } else {
       setWarning(<p className="colorWarningLimiteText">The number of characters is greater than 140. Please try again!</p>)
     }
   }
 
   return (
-    <div className="styleDivContainer">
+    <div className="styleDivContainer" >
       <form onSubmit={hundleSendContent}>
         <textarea className="inputContentPrincipal"
           type="text"
@@ -61,7 +61,8 @@ export default function Main() {
         </div>
       </form>
 
-      <main className="ContentBoxMain" >
+      {/* principal form */}
+      <main className="mainFormat" >
         {warning}
         {storageContent.map((postStorage, indexId) => (
           <ul key={indexId}>
@@ -72,7 +73,7 @@ export default function Main() {
               <p className="textContentPosted" >
                 {postStorage}
                 <div className="descriptionVerificate" type='description' >
-                <CheckedProfile />
+                  <CheckedProfile />
                 </div>
                 <button
                   className="individualDeleteContent"
