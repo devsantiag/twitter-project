@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import '../design/main_style.css'
 import CheckedProfile from "./CheckedProfile";
-import '../design/Responsiveness.css'
+import '../design/Responsiveness.css';
 
 export default function Main() {
   const [inputContent, setInputContent] = useState('')
@@ -72,9 +72,7 @@ export default function Main() {
               <p className="userNickName">{profileInfo.nickName}</p>
               <p className="textContentPosted" >
                 {postStorage}
-                <div className="descriptionVerificate" type='description' >
                   <CheckedProfile />
-                </div>
                 <button
                   className="individualDeleteContent"
                   type="button"
