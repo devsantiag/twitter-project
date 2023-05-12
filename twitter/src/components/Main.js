@@ -2,8 +2,8 @@
 
 import React, { useState } from "react";
 import '../design/main_style.css'
-import CheckedProfile from "./CheckedProfile";
 import '../design/Responsiveness.css';
+import UserChecked from "./UserChecked";
 
 export default function Main() {
   const [inputContent, setInputContent] = useState('')
@@ -26,7 +26,8 @@ export default function Main() {
   const profileInfo = {
     nameUser: 'Santiago | DEV',
     nickName: '@devsantiag',
-    userImage: 'https://pbs.twimg.com/profile_images/1644894643660759040/J4whV6qJ_400x400.jpg'
+    userImage: 'https://pbs.twimg.com/profile_images/1644894643660759040/J4whV6qJ_400x400.jpg',
+    certification: <UserChecked />,
   }
   function hundleSendContent(event) {
     if (inputContent.length <= 140) {
@@ -70,9 +71,9 @@ export default function Main() {
               <img src={profileInfo.userImage} className="imageUser" alt="userImage" />
               <p className="nameUser"> {profileInfo.nameUser} </p>
               <p className="userNickName">{profileInfo.nickName}</p>
+              {profileInfo.certification}
               <p className="textContentPosted" >
                 {postStorage}
-                  <CheckedProfile />
                 <button
                   className="individualDeleteContent"
                   type="button"
