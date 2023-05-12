@@ -1,9 +1,11 @@
-/* the principal main of contents */
+/* the principal part of application (tw) */
 
 import React, { useState } from "react";
-import '../design/main_style.css'
-import '../design/Responsiveness.css';
+
+import '../Design/MainStyle.css'
+
 import UserChecked from "./UserChecked";
+
 
 export default function Main() {
   const [inputContent, setInputContent] = useState('')
@@ -23,8 +25,15 @@ export default function Main() {
 
   const remainingChars = 140 - inputContent.length
 
+  function remainingCharsstyle() {
+    if (remainingChars < 100) {
+      return 'CharacterCounterPosition'
+    } else {
+      return ""
+    }
+  }
   const profileInfo = {
-    nameUser: 'Santiago | DEV',
+    nameUser: 'Santiago',
     nickName: '@devsantiag',
     userImage: 'https://pbs.twimg.com/profile_images/1644894643660759040/J4whV6qJ_400x400.jpg',
     certification: <UserChecked />,
@@ -58,7 +67,7 @@ export default function Main() {
         />
         <button className="buttonClearAll" type="button" onClick={handleClearFormClick}>Clear all</button>
         <div className="CharacterCounter">
-          <p>{remainingChars}</p>
+          <p className={remainingCharsstyle()}>{remainingChars}</p>
         </div>
       </form>
 
@@ -84,8 +93,6 @@ export default function Main() {
             </li>
           </ul>
         ))}
-        <div>
-        </div>
       </main>
     </div>
   )

@@ -2,10 +2,8 @@
 
 // Principal repository https://github.com/devsantiag/twitter-project
 
-import React from 'react'
-import Main from './components/Main'
-import './design/main_style.css'
-import Logo from './components/Logo'
+import Logo from './Main/Page/MainPage/Logo'
+import Main from './Main/Page/MainPage/Main'
 
 function App() {
   return (

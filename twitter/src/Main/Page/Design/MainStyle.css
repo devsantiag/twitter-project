@@ -51,9 +51,8 @@
     margin: 0 auto;
     padding: 0;
     font-size: 11pt;
-    top: -40px;
-    left: 140%;
-    transform: translate(2.8%, 0%);
+    top: -42px;
+    left: 138%;
     width: 0;
 }
 
@@ -201,4 +200,10 @@
 .individualDeleteContent:hover,
 .buttonClearAll:hover {
     background-color: #1ea0d8e8;
+}
+
+/* null */
+.CharacterCounterPosition {
+    background-color: rebeccapurple;
+    transform: translate(7.9px);
 }

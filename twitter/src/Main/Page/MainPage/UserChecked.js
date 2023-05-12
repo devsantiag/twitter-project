@@ -26,4 +26,5 @@ class UserChecked extends React.Component {
     )
   }
 }
+
 export default UserChecked
