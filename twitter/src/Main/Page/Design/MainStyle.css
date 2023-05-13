@@ -25,15 +25,17 @@
 /* style of container div principal */
 .styleDivContainer {
     position: absolute;
-    display: block;
+    display: flex;
     padding: 0;
-    margin: 0 auto;
-    right: 37.6%;
-    transform: translate(-55%, 10%);
+    margin: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-100%, -214%);
 }
 
 /* input-txt principal when the cliente put contents for post */
 .inputContentPrincipal {
+    display: inline;
     width: 200%;
     height: 100px;
     font-style: normal;
@@ -41,7 +43,7 @@
     border-radius: 16px;
     padding: 10px;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 14.5pt;
+    font-size: 12pt;
 }
 
 /* style of Character Counter */
@@ -72,6 +74,7 @@
     font-size: 14px;
     text-align: center;
     color: white;
+    transition: background-color 0.2s ease;
 }
 
 /*
@@ -82,10 +85,11 @@
 .mainFormat {
     position: absolute;
     display: block;
-    width: 200.9%;
+    width: 200%;
     font-size: 14pt;
     top: 79%;
     transform: translate(0px, 65.5px);
+    margin-right: 10px;
 }
 
 /* color warning limite text  */
@@ -93,17 +97,51 @@
     display: flex;
     transform: translate(0px, -1em);
     position: absolute;
-    top: -9%;
+    top: -1%;
     color: rgba(255, 0, 0, 0.938);
 }
 
 /* style-li: content post */
 .liContentStyle {
     position: relative;
-    display: flexbox;
-    margin: 0 auto;
+    display: inline-block;
+    top: -5px;
+    margin: 10px auto;
     padding: 0 0 5% 0;
-    height: 160px;
+
+    width: 100%;
+    height: 150px;
+
+    background-color: rgba(97, 97, 97, 0.075);
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+.liContentStyle:hover {
+    background-color: rgba(97, 97, 97, 0.13);
+}
+
+/* button of delete content indididual post */
+.individualDeleteContent {
+    position: absolute;
+    display: flex;
+    top: 50px;
+    left: 78%;
+    width: 20%;
+    height: 40px;
+    transform: translate(0px, 50px);
+    cursor: pointer;
+    border-radius: 20px;
+    border: none;
+    text-align: center;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    background-color: #2ab2ec;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
 }
 
 /* image profile of user */
@@ -133,10 +171,22 @@
     padding: 0;
     width: 0;
     height: 0;
-    background-color: aqua;
 }
+
 .nameUser:hover {
     text-decoration: underline;
+}
+
+/* user verification */
+.verificationCertificate {
+    position: absolute;
+    display: flex;
+    width: 22px;
+    height: 22px;
+    top: 44px;
+    left: 3.8px;
+    transform: translate(117px, -50px);
+    display: block;
 }
 
 /* nickname user */
@@ -146,7 +196,7 @@
     font-size: 9pt;
     text-indent: 9.3%;
     top: -48px;
-    left: -27%;
+    left: -25%;
     font-weight: bold;
     color: rgba(0, 0, 0, 0.815);
     cursor: pointer;
@@ -154,58 +204,29 @@
     background-color: rebeccapurple;
 }
 
-/* user verification */
-.verificationCertificate {
-    position: absolute;
-    display: flex;
-    width: 22px;
-    height: 22px;
-    top: 49px;
-    left: 1.8%;
-    transform: translate(117px, -50px);
-}
-
 /* content posted */
 .textContentPosted {
     position: absolute;
+    display: flex;
     word-break: break-all;
     hyphens: auto;
     display: flex;
+    width: 88%;
     text-align: justify;
     position: relative;
     margin: 0 65px 0 0;
-    left: 9.4%;
-    top: 5px;
-    transform: translate(0px, -56px);
+    left: 9.9%;
+    top: 10px;
+    transform: translate(0px, -55px);
     white-space: pre-wrap;
     overflow-wrap: break-word;
+    font-size: 12pt;
 }
 
-/* button of delete content indididual post */
-.individualDeleteContent {
-    position: absolute;
-    display: inline-flex;
-    top: 35px;
-    left: 75%;
-    width: 20%;
-    height: 40px;
-    transform: translate(0px, 50px);
-    cursor: pointer;
-    border-radius: 20px;
-    border: none;
-    text-align: center;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    background-color: #2ab2ec;
-    color: white;
-    align-items: center;
-    justify-content: center;
-}
-
+/* animation buttons */
 .individualDeleteContent:hover,
 .buttonClearAll:hover {
-    background-color: #1ea0d8e8;
+    background-color: #1ea0d8f1;
 }
 
 /* null */

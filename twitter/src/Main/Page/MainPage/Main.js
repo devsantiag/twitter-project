@@ -81,13 +81,13 @@ export default function Main() {
               {profileInfo.certification}
               <p className="textContentPosted" >
                 {postStorage}
-                <button
-                  className="individualDeleteContent"
-                  type="button"
-                  value={indexId}
-                  onClick={(event) => hundleClearItemIndividual(event.target.value)}
-                >Delete</button>
               </p>
+            <button
+              className="individualDeleteContent"
+              type="button"
+              value={indexId}
+              onClick={(event) => hundleClearItemIndividual(event.target.value)}
+            >Delete</button>
             </li>
           </ul>
         ))}
