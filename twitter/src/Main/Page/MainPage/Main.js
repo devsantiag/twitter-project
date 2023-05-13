@@ -11,7 +11,6 @@ import '../Design/PageDesign/MainStyle.css'
 export default function Main() {
   const [inputContent, setInputContent] = useState('')
   const [storageContent, setStorageContent] = useState([])
-  // const [postedContent, setPostedContent] = useState('')
 
   const [warning, setWarning] = useState('')
 
