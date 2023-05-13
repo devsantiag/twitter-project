@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const NavBar = () => {
   return (
     <div>
-      <Link to='' >NavBar</Link>
+      <Link to='UserProfile' >NavBar</Link>
     </div>
   )
 }

@@ -6,7 +6,8 @@ import App from './App.jsx';
 // manual imports and necessary for application
 import './index.css';
 import { PageNotFound } from './components/PageNotFound.jsx';
-
+import UserProfile from './routs/UserProfile.jsx';
+import NavBar from './components/NavBar.jsx';
 
 const router = createBrowserRouter([
   {
@@ -15,8 +16,8 @@ const router = createBrowserRouter([
     errorElement: <PageNotFound/>,
     children: [
       {
-        path: 'userprofile',
-        element: <App/>
+        path: 'navbar',
+        element: <NavBar/>
       },
     ],
   },
