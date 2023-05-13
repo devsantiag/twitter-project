@@ -1,10 +1,12 @@
 /* the principal part of application (tw) */
 
 import React, { useState } from "react";
-import '../Design/MainStyle.css'
-import UserChecked from "./Components/UserChecked";
 
-import DirectProfile from "./DirectProfile";
+import UserChecked from "./Components/UserChecked";
+import ProfileInfo from "./Components/ProfileInfo";
+import '../Design/PageDesign/MainStyle.css'
+
+
 
 export default function Main() {
   const [inputContent, setInputContent] = useState('')
@@ -88,7 +90,7 @@ export default function Main() {
           <ul key={indexId}>
             <li className="liContentStyle">
               <img src={profileInfo.userImage} className="imageUser" alt="userImage" />
-              <p className="nameUser"> {profileInfo.nameUser} </p>
+              <p className="nameUser"> {ProfileInfo.name} </p>
               <p className="userNickName">{profileInfo.nickName}</p>
               {profileInfo.certification}
               <p className="textContentPosted" >

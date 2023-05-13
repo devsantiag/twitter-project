@@ -4,7 +4,6 @@
 
 import Logo from './Main/Page/MainPage/Components/Logo'
 import Main from './Main/Page/MainPage/Main'
-import DirectProfile from './Main/Page/MainPage/DirectProfile'
 
 function App() {
   return (
@@ -12,7 +11,6 @@ function App() {
       <Logo />
       <Main />
       <footer>
-        <DirectProfile />
       </footer>
     </div>
   )
