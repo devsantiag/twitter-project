@@ -64,6 +64,7 @@ export default function Main() {
           onKeyDown={hundleSendContent}
         />
         <button className="buttonClearAll" type="button" onClick={handleClearFormClick}>Clear all</button>
+        <button className="postContentButton">Post</button>
         <div className="CharacterCounter">
           <p className={remainingCharsstyle()}>{remainingChars}</p>
         </div>
@@ -88,6 +89,7 @@ export default function Main() {
                 value={indexId}
                 onClick={(event) => hundleClearItemIndividual(event.target.value)}
               >Delete</button>
+              
             </li>
           </ul>
         ))}

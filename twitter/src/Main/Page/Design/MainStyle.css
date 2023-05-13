@@ -61,7 +61,6 @@
 /* style-button clear all content */
 .buttonClearAll {
     position: relative;
-    cursor: pointer;
     padding: 10px;
     width: 50%;
     height: 50px;
@@ -72,9 +71,33 @@
     border: none;
     font-weight: bold;
     font-size: 14px;
+    color: white;
+    transition: background-color 0.2s ease;
+    left: 99%;
+}
+
+/* post content button */
+.postContentButton {
+    position: relative;
+    cursor: pointer;
+    padding: 10px;
+    width: 50%;
+    height: 50px;
+    background-color: #2ab2ec;
+    cursor: pointer;
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+    font-size: 14px;
     text-align: center;
     color: white;
     transition: background-color 0.2s ease;
+    left: 100%;
+}
+
+.postContentButton:hover,
+.buttonClearAll:hover {
+    background-color: #1ea0d8f1;
 }
 
 /*
@@ -183,9 +206,9 @@
     display: flex;
     width: 22px;
     height: 22px;
-    top: 50px;
-    left: 3.8px;
-    transform: translate(117px, -50px);
+    top: 58px;
+    left: 10px;
+    transform: translate(120px, -50px);
     display: block;
 }
 
@@ -196,7 +219,7 @@
     font-size: 9pt;
     text-indent: 9.3%;
     top: -43px;
-    left: -25%;
+    left: -27%;
     font-weight: bold;
     color: rgba(0, 0, 0, 0.815);
     cursor: pointer;
@@ -224,8 +247,7 @@
 }
 
 /* animation buttons */
-.individualDeleteContent:hover,
-.buttonClearAll:hover {
+.individualDeleteContent:hover {
     background-color: #1ea0d8f1;
 }
 
