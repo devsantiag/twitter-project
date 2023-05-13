@@ -82,12 +82,12 @@ export default function Main() {
               <p className="textContentPosted" >
                 {postStorage}
               </p>
-            <button
-              className="individualDeleteContent"
-              type="button"
-              value={indexId}
-              onClick={(event) => hundleClearItemIndividual(event.target.value)}
-            >Delete</button>
+              <button
+                className="individualDeleteContent"
+                type="button"
+                value={indexId}
+                onClick={(event) => hundleClearItemIndividual(event.target.value)}
+              >Delete</button>
             </li>
           </ul>
         ))}
