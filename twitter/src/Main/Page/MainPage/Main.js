@@ -2,8 +2,9 @@
 
 import React, { useState } from "react";
 import '../Design/MainStyle.css'
-import UserChecked from "./UserChecked";
+import UserChecked from "./Components/UserChecked";
 
+import DirectProfile from "./DirectProfile";
 
 export default function Main() {
   const [inputContent, setInputContent] = useState('')

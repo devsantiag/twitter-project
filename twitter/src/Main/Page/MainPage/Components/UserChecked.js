@@ -10,9 +10,7 @@ class UserChecked extends React.Component {
     }
   }
   render() {
-
     const { userChecked } = this.state
-
     return (
       <div>
         {userChecked && (

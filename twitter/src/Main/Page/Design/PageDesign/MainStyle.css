@@ -144,7 +144,7 @@
 
     
 }
-
+/* animation background 'li' */
 .liContentStyle:hover {
     background-color: rgba(97, 97, 97, 0.13);
 }
@@ -257,7 +257,7 @@
     background-color: #1ea0d8f1;
 }
 
-/* null */
+/* position of character count numbers placed in the input */
 .CharacterCounterPosition {
     background-color: rebeccapurple;
     transform: translate(7.9px);

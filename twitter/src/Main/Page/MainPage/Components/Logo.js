@@ -11,7 +11,6 @@ class Logo extends React.Component {
     }
     render() {
         const { birdLogo } = this.state
-
         return (
             <div>
                 {birdLogo && (
