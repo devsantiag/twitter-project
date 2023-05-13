@@ -8,11 +8,23 @@ import UserChecked from "./UserChecked";
 export default function Main() {
   const [inputContent, setInputContent] = useState('')
   const [storageContent, setStorageContent] = useState([])
+  // const [postedContent, setPostedContent] = useState('')
+
   const [warning, setWarning] = useState('')
 
   function handleClearFormClick() {
     setStorageContent([])
     setWarning('')
+  }
+
+  function hundlePost(event) {
+    if (inputContent.length > 10) {
+      event.preventDefault()
+      setStorageContent([...storageContent, inputContent])
+      setInputContent('')
+    } else {
+      setWarning(<p className="colorWarningLimiteText">The number of characters is greater than 140. Please try again!</p>)
+    }
   }
 
   function hundleClearItemIndividual(index) {
@@ -64,13 +76,11 @@ export default function Main() {
           onKeyDown={hundleSendContent}
         />
         <button className="buttonClearAll" type="button" onClick={handleClearFormClick}>Clear all</button>
-        <button className="postContentButton">Post</button>
+        <button className="postContentButton" type="button" onClick={hundlePost} >Post</button>
         <div className="CharacterCounter">
           <p className={remainingCharsstyle()}>{remainingChars}</p>
         </div>
       </form>
-
-      {/* principal form */}
       <main className="mainFormat" >
         {warning}
         {storageContent.map((postStorage, indexId) => (
@@ -89,7 +99,6 @@ export default function Main() {
                 value={indexId}
                 onClick={(event) => hundleClearItemIndividual(event.target.value)}
               >Delete</button>
-              
             </li>
           </ul>
         ))}
