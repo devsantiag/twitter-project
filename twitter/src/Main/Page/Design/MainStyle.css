@@ -109,8 +109,8 @@
 /* image profile of user */
 .imageUser {
     position: relative;
+    display: flex;
     border-radius: 100%;
-    display: block;
     width: 8.5%;
     left: -45.6%;
     top: 0px;
@@ -126,12 +126,17 @@
     font-size: 12pt;
     text-indent: 9.3%;
     top: -50px;
-    left: 56px;
+    left: -41.5%;
     font-weight: bold;
     cursor: pointer;
     margin: 0 auto;
     padding: 0;
+    width: 0;
+    height: 0;
     background-color: aqua;
+}
+.nameUser:hover {
+    text-decoration: underline;
 }
 
 /* nickname user */
@@ -140,8 +145,8 @@
     display: flex;
     font-size: 9pt;
     text-indent: 9.3%;
-    top: -52.2px;
-    left: 12.7%;
+    top: -48px;
+    left: -27%;
     font-weight: bold;
     color: rgba(0, 0, 0, 0.815);
     cursor: pointer;
@@ -155,11 +160,9 @@
     display: flex;
     width: 22px;
     height: 22px;
-    top: 29px;
-    left: -0.2%;
+    top: 49px;
+    left: 1.8%;
     transform: translate(117px, -50px);
-    cursor: pointer;
-    background-color: chocolate;
 }
 
 /* content posted */
