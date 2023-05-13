@@ -37,7 +37,7 @@ export default function Main() {
     certification: <UserChecked />,
   }
   function hundleSendContent(event) {
-    if (inputContent.length <= 140) {
+    if (inputContent.length <= 140 && inputContent.length > 10) {
       if (event.key === 'Enter') {
         event.preventDefault()
         setStorageContent([
