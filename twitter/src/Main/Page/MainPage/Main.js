@@ -1,9 +1,7 @@
 /* the principal part of application (tw) */
 
 import React, { useState } from "react";
-
 import '../Design/MainStyle.css'
-
 import UserChecked from "./UserChecked";
 
 
