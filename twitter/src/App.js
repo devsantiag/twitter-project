@@ -10,8 +10,6 @@ function App() {
     <div>
       <Logo />
       <Main />
-      <footer>
-      </footer>
     </div>
   )
 }
