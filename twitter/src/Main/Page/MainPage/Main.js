@@ -6,8 +6,6 @@ import UserChecked from "./Components/UserChecked";
 import ProfileInfo from "./Components/ProfileInfo";
 import '../Design/PageDesign/MainStyle.css'
 
-
-
 export default function Main() {
   const [inputContent, setInputContent] = useState('')
   const [storageContent, setStorageContent] = useState([])
