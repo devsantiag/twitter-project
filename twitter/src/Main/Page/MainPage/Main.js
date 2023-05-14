@@ -6,6 +6,7 @@ import UserChecked from "./Components/UserChecked";
 import ProfileInfo from "./Components/ProfileInfo";
 import '../Design/PageDesign/MainStyle.css'
 
+
 export default function Main() {
   const [inputContent, setInputContent] = useState('')
   const [storageContent, setStorageContent] = useState([])
@@ -98,7 +99,7 @@ export default function Main() {
                 type="button"
                 value={indexId}
                 onClick={(event) => hundleClearItemIndividual(event.target.value)}
-              >Delete</button>
+                >Delete</button>
             </li>
           </ul>
         ))}
