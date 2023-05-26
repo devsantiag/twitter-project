@@ -43,12 +43,6 @@ export default function Main() {
       return ""
     }
   }
-  const profileInfo = {
-    nameUser: 'Santiago',
-    nickName: '@devsantiag',
-    userImage: 'https://pbs.twimg.com/profile_images/1644894643660759040/J4whV6qJ_400x400.jpg',
-    certification: <UserChecked />,
-  }
   function hundleSendContent(event) {
     if (inputContent.length <= 140 && inputContent.length > 10) {
       if (event.key === 'Enter') {
@@ -87,10 +81,10 @@ export default function Main() {
         {storageContent.map((postStorage, indexId) => (
           <ul key={indexId}>
             <li className="liContentStyle">
-              <img src={profileInfo.userImage} className="imageUser" alt="userImage" />
-              <p className="nameUser"> {ProfileInfo.name} </p>
-              <p className="userNickName">{profileInfo.nickName}</p>
-              {profileInfo.certification}
+
+
+              <ProfileInfo name="Santiago" nickName='@devsantiag' userImg="'https://pbs.twimg.com/profile_images/1644894643660759040/J4whV6qJ_400x400.jpg'" />
+
               <p className="textContentPosted" >
                 {postStorage}
               </p>
