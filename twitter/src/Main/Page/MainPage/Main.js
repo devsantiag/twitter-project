@@ -6,7 +6,6 @@ import UserChecked from "./Components/UserChecked";
 import ProfileInfo from "./Components/ProfileInfo";
 import '../Design/PageDesign/MainStyle.css'
 
-
 export default function Main() {
   const [inputContent, setInputContent] = useState('')
   const [storageContent, setStorageContent] = useState([])
@@ -43,6 +42,7 @@ export default function Main() {
       return ""
     }
   }
+
   function hundleSendContent(event) {
     if (inputContent.length <= 140 && inputContent.length > 10) {
       if (event.key === 'Enter') {
@@ -81,10 +81,7 @@ export default function Main() {
         {storageContent.map((postStorage, indexId) => (
           <ul key={indexId}>
             <li className="liContentStyle">
-
-
               <ProfileInfo name="Santiago" nickName='@devsantiag' userImg="'https://pbs.twimg.com/profile_images/1644894643660759040/J4whV6qJ_400x400.jpg'" />
-
               <p className="textContentPosted" >
                 {postStorage}
               </p>
@@ -93,7 +90,7 @@ export default function Main() {
                 type="button"
                 value={indexId}
                 onClick={(event) => hundleClearItemIndividual(event.target.value)}
-                >Delete</button>
+              >Delete</button>
             </li>
           </ul>
         ))}

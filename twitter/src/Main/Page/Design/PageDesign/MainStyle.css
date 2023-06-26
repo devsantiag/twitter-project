@@ -235,8 +235,6 @@
 
 /* content posted */
 .textContentPosted {
-    position: absolute;
-    display: flex;
     word-break: break-all;
     hyphens: auto;
     display: flex;
@@ -245,7 +243,7 @@
     position: relative;
     margin: 0 65px 0 0;
     left: 9.9%;
-    top: 17px;
+    top: 65%;
     transform: translate(0px, -55px);
     white-space: pre-wrap;
     overflow-wrap: break-word;
