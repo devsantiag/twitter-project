@@ -1,0 +1,31 @@
+/* style profile user */
+
+/* box */
+.boxPositionProfileInfo {
+    position: absolute;
+    display: inline;
+    width: 0;
+    height: 0;
+}
+/* initial position */
+.userName, .nickName, .statusChecked, svg{
+    position: relative;
+    display: inline;
+    left: 50px;
+}
+/* user name */
+.userName {
+    display: inline-block;
+}
+.verificate {
+    display: inline-block;
+    left: 72px;
+    top: -21px;
+}
+/* user nickname */
+.nickName {
+    display: inline-flex;
+    position: relative;
+    top: -177px;
+    left: 146px;
+}

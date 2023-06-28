@@ -1,10 +1,9 @@
 /* the principal part of application (tw) */
 
 import React, { useState } from "react";
-
+import ProfileUser from "./Components/ProfileUser";
+import '../MainPage/PageDesign/MainStyle.css'
 import UserChecked from "./Components/UserChecked";
-import ProfileInfo from "./Components/ProfileInfo";
-import '../Design/PageDesign/MainStyle.css'
 
 export default function Main() {
   const [inputContent, setInputContent] = useState('')
@@ -81,7 +80,7 @@ export default function Main() {
         {storageContent.map((postStorage, indexId) => (
           <ul key={indexId}>
             <li className="liContentStyle">
-              <ProfileInfo name="Santiago" nickName='@devsantiag' userImg="'https://pbs.twimg.com/profile_images/1644894643660759040/J4whV6qJ_400x400.jpg'" />
+              <ProfileUser />
               <p className="textContentPosted" >
                 {postStorage}
               </p>

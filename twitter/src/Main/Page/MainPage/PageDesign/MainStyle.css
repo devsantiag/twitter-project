@@ -77,7 +77,23 @@
     transition: background-color 0.2s ease;
     left: 99%;
 }
-
+/* post container */
+.textContentPosted {
+    word-break: break-all;
+    hyphens: auto;
+    background-color: red;
+    display: inline-flex;
+    text-align: justify;
+    position: relative;
+    margin: 0 65px 0 0;
+    left: 9.9%;
+    top: 68%;
+    transform: translate(0px, -55px);
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    font-size: 12pt;
+    display: inline-block;
+}
 /* post content button */
 .postContentButton {
     position: relative;
@@ -134,21 +150,16 @@
     top: -5px;
     margin: 10px auto;
     padding: 0 0 5% 0;
-
     width: 100%;
     height: 150px;
-
     background-color: rgba(97, 97, 97, 0.075);
     border-radius: 10px;
     transition: background-color 0.3s ease;
-
-    
 }
 /* animation background 'li' */
 .liContentStyle:hover {
     background-color: rgba(97, 97, 97, 0.13);
 }
-
 /* button of delete content indididual post */
 .individualDeleteContent {
     position: absolute;
@@ -171,83 +182,6 @@
     justify-content: center;
     transition: background-color 0.2s ease;
     cursor: pointer;
-}
-
-/* image profile of user */
-.imageUser {
-    position: relative;
-    display: flex;
-    border-radius: 100%;
-    width: 8.5%;
-    left: 0%;
-    top: 0px;
-    cursor: pointer;
-    margin-right: 0;
-    margin-left: 0;
-}
-
-/* name user, nickname of user and checked */
-.nameUser {
-    position: relative;
-    display: flex;
-    font-size: 12pt;
-    text-indent: 9.3%;
-    top: -45px;
-    left: -41.5%;
-    font-weight: bold;
-    cursor: pointer;
-    margin: 0 auto;
-    padding: 0;
-    width: 0;
-    height: 0;
-}
-
-.nameUser:hover {
-    text-decoration: underline;
-}
-
-/* user verification */
-.verificationCertificate {
-    position: absolute;
-    display: flex;
-    width: 22px;
-    height: 22px;
-    top: 58px;
-    left: 22px;
-    transform: translate(120px, -50px);
-    display: block;
-}
-
-/* nickname user */
-.userNickName {
-    position: relative;
-    display: flex;
-    font-size: 9pt;
-    text-indent: 9.3%;
-    top: -43px;
-    left: -166px;
-    font-weight: bold;
-    color: rgba(0, 0, 0, 0.815);
-    cursor: pointer;
-    width: 0px;
-    background-color: rebeccapurple;
-}
-
-/* content posted */
-.textContentPosted {
-    word-break: break-all;
-    hyphens: auto;
-    display: flex;
-    width: 88%;
-    text-align: justify;
-    position: relative;
-    margin: 0 65px 0 0;
-    left: 9.9%;
-    top: 65%;
-    transform: translate(0px, -55px);
-    white-space: pre-wrap;
-    overflow-wrap: break-word;
-    font-size: 12pt;
 }
 
 /* animation buttons */
